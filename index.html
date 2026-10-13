@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO ===== -->
+  <title>Brunelli Pizzaria | Pizzas, Esfihas e Comida Chinesa – Delivery na Zona Sul de SP</title>
+  <meta name="description" content="Brunelli Pizzaria: desde 1997 no Parque Arariba, São Paulo. Mais de 60 sabores de pizza, esfihas e comida chinesa com entrega rápida. Peça pelo WhatsApp (11) 95227-4969.">
+  <meta name="keywords" content="pizzaria, pizza delivery, Parque Arariba, Campo Limpo, zona sul, São Paulo, esfiha, yakisoba, comida chinesa, Brunelli">
+  <meta name="theme-color" content="#6E0000">
+  <link rel="canonical" href="https://www.brunellipizzaria.com.br/">
+
+  <!-- ===== Open Graph (prévia ao compartilhar no WhatsApp / redes) ===== -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Brunelli Pizzaria">
+  <meta property="og:title" content="Brunelli Pizzaria | A paixão por pizza desde 1997">
+  <meta property="og:description" content="Pizzas, esfihas e comida chinesa com entrega na zona sul de São Paulo. Monte seu pedido e finalize pelo WhatsApp.">
+  <meta property="og:url" content="https://www.brunellipizzaria.com.br/">
+  <meta property="og:image" content="https://static.wixstatic.com/media/ae8f84_134e86b2d3c742af83f8ec1d625c3b9d~mv2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/ae8f84_16227472b7694ff882bfcde82a74b481~mv2.png">
+
+  <!-- ===== Fontes (Google Fonts) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kaushan+Script&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://client-assets.anota.ai">
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <!-- ===== Dados estruturados (ajuda o Google a mostrar endereço e horário) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Brunelli Pizzaria",
+    "image": "https://static.wixstatic.com/media/ae8f84_134e86b2d3c742af83f8ec1d625c3b9d~mv2.jpg",
+    "url": "https://www.brunellipizzaria.com.br/",
+    "telephone": "+55-11-95227-4969",
+    "servesCuisine": ["Pizza", "Esfiha", "Comida Chinesa"],
+    "priceRange": "$$",
+    "foundingDate": "1997",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Lucilo de Almeida, 237 - Parque Arariba",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "05778-250",
+      "addressCountry": "BR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -23.6415, "longitude": -46.7532 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "18:00", "closes": "23:59" }
+    ],
+    "sameAs": ["https://www.instagram.com/pizzariabrunelli/", "https://www.facebook.com/brunellipizzas/"]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================
+       1. VARIÁVEIS DE TEMA — troque as cores aqui
+       (paleta tirada da logo: fundo vinho + letreiro dourado)
+       ========================================================== */
+    :root {
+      --vinho-900: #3D0303;   /* vinho bem escuro (rodapé, sombras) */
+      --vinho-700: #6E0000;   /* vinho da logo (cabeçalho, hero) */
+      --vinho-500: #8B0000;   /* vermelho do site atual (botões, preços) */
+      --ouro: #F5A21B;        /* dourado/laranja do letreiro */
+      --ouro-claro: #FFCB3D;  /* amarelo do letreiro */
+      --creme: #FFF7E8;       /* fundo claro do cardápio */
+      --creme-escuro: #FBEBCB;
+      --branco: #FFFFFF;
+      --texto: #2B1712;
+      --texto-suave: #6A5850;
+      --borda: #EFDFC2;
+      --whatsapp: #25D366;
+      --whatsapp-escuro: #128C4B;
+
+      --fonte-titulo: 'Playfair Display', Georgia, serif;
+      --fonte-texto: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --fonte-logo: 'Kaushan Script', cursive;
+
+      --raio: 18px;
+      --raio-pequeno: 12px;
+      --sombra: 0 6px 24px rgba(61, 3, 3, .08);
+      --sombra-forte: 0 18px 44px rgba(61, 3, 3, .18);
+      --transicao: .25s ease;
+      --altura-cabecalho: 68px;
+      --largura-max: 1200px;
+    }
+
+    /* ==========================================================
+       2. BASE
+       ========================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--altura-cabecalho) + 12px); -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--fonte-texto);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--texto);
+      background: var(--creme);
+      overflow-x: hidden;
+    }
+    body.sem-rolagem { overflow: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    h1, h2, h3, p { margin: 0; }
+    ul { margin: 0; padding: 0; list-style: none; }
+    button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
+    :focus-visible { outline: 3px solid var(--ouro); outline-offset: 3px; border-radius: 6px; }
+
+    .container { width: 100%; max-width: var(--largura-max); margin-inline: auto; padding-inline: 20px; }
+    .secao { padding-block: 64px; }
+    .secao--clara { background: var(--branco); }
+    .icone { width: 24px; height: 24px; fill: currentColor; flex-shrink: 0; }
+    .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+    .pular-conteudo {
+      position: absolute; left: 12px; top: -60px; z-index: 10000;
+      background: var(--ouro-claro); color: var(--vinho-900); padding: 12px 18px; border-radius: 10px; font-weight: 700;
+      transition: top var(--transicao);
+    }
+    .pular-conteudo:focus { top: 12px; }
+
+    /* Títulos de seção */
+    .cabecalho-secao { max-width: 640px; margin-bottom: 36px; }
+    .cabecalho-secao--centro { margin-inline: auto; text-align: center; }
+    .sobretitulo {
+      display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--vinho-500); margin-bottom: 8px;
+    }
+    .titulo-secao { font-family: var(--fonte-titulo); font-size: clamp(1.7rem, 4.5vw, 2.5rem); line-height: 1.15; color: var(--vinho-900); }
+    .texto-secao { color: var(--texto-suave); margin-top: 12px; }
+
+    /* Botões */
+    .botao {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 12px 24px; border-radius: 999px;
+      font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; line-height: 1.2;
+      transition: transform var(--transicao), box-shadow var(--transicao), background var(--transicao), color var(--transicao);
+    }
+    .botao:hover { transform: translateY(-2px); }
+    .botao:active { transform: translateY(0); }
+    .botao--ouro { background: linear-gradient(135deg, var(--ouro-claro), var(--ouro)); color: var(--vinho-900); box-shadow: 0 8px 22px rgba(245, 162, 27, .35); }
+    .botao--vinho { background: var(--vinho-500); color: var(--branco); }
+    .botao--vinho:hover { background: var(--vinho-700); box-shadow: 0 8px 20px rgba(110, 0, 0, .25); }
+    .botao--contorno { border: 2px solid rgba(255, 255, 255, .55); color: var(--branco); }
+    .botao--contorno:hover { background: rgba(255, 255, 255, .12); border-color: var(--branco); }
+    .botao--whats { background: var(--whatsapp); color: #06301a; }
+    .botao--whats:hover { box-shadow: 0 8px 20px rgba(37, 211, 102, .35); }
+    .botao--largo { width: 100%; }
+
+    /* ==========================================================
+       3. CABEÇALHO FIXO
+       ========================================================== */
+    .cabecalho {
+      position: fixed; inset: 0 0 auto 0; z-index: 900; height: var(--altura-cabecalho);
+      background: var(--vinho-700); color: var(--branco);
+      transition: box-shadow var(--transicao), background var(--transicao);
+    }
+    .cabecalho.rolou { box-shadow: 0 6px 24px rgba(0, 0, 0, .28); background: rgba(92, 0, 0, .97); }
+    .cabecalho__interno { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+
+    /* Logo em texto, inspirada no letreiro dourado da marca */
+    .logo { display: inline-flex; flex-direction: column; align-items: flex-start; text-decoration: none; line-height: 1; padding-block: 4px; }
+    .logo__nome {
+      font-family: var(--fonte-logo); font-size: 1.9rem; padding: 2px 6px 0 0;
+      background: linear-gradient(180deg, var(--ouro-claro) 20%, var(--ouro) 85%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      transform: rotate(-4deg); transform-origin: left center;
+    }
+    .logo__sub { font-size: .62rem; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: var(--ouro); margin: 2px 0 0 34px; }
+
+    .menu { position: fixed; inset: var(--altura-cabecalho) 0 auto 0; background: var(--vinho-700); padding: 8px 20px 24px;
+      box-shadow: 0 18px 30px rgba(0, 0, 0, .3); transform: translateY(-12px); opacity: 0; visibility: hidden;
+      transition: transform var(--transicao), opacity var(--transicao), visibility var(--transicao); }
+    .menu.aberto { transform: none; opacity: 1; visibility: visible; }
+    .menu__lista a {
+      display: flex; align-items: center; min-height: 48px; padding: 8px 4px; text-decoration: none; font-weight: 600;
+      border-bottom: 1px solid rgba(255, 255, 255, .12); transition: color var(--transicao);
+    }
+    .menu__lista a:hover, .menu__lista a.ativo { color: var(--ouro-claro); }
+
+    .cabecalho__acoes { display: flex; align-items: center; gap: 6px; }
+    .botao-icone {
+      position: relative; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: var(--branco);
+      transition: background var(--transicao);
+    }
+    .botao-icone:hover { background: rgba(255, 255, 255, .14); }
+    .contador {
+      position: absolute; top: 2px; right: 0; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px;
+      background: var(--ouro-claro); color: var(--vinho-900); font-size: .78rem; font-weight: 700; display: grid; place-items: center;
+      border: 2px solid var(--vinho-700);
+    }
+    .contador[hidden] { display: none; }
+    .contador.pulo { animation: pulo .45s ease; }
+    @keyframes pulo { 40% { transform: scale(1.45); } }
+
+    /* Ícone hambúrguer */
+    .hamburguer { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .hamburguer span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform var(--transicao), opacity var(--transicao); }
+    .hamburguer span + span { margin-top: 6px; }
+    .hamburguer[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburguer[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburguer[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ==========================================================
+       4. HERO (banner principal)
+       ========================================================== */
+    .hero {
+      position: relative; padding: calc(var(--altura-cabecalho) + 40px) 0 64px; color: var(--branco); overflow: hidden;
+      background:
+        radial-gradient(900px 500px at 85% 10%, rgba(245, 162, 27, .22), transparent 60%),
+        linear-gradient(160deg, var(--vinho-700) 0%, var(--vinho-900) 100%);
+    }
+    .hero__grade { display: grid; gap: 40px; align-items: center; }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(255, 255, 255, .1); font-size: .88rem; font-weight: 600; margin-bottom: 18px;
+    }
+    .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #bbb; }
+    .status.aberto::before { background: #4ADE80; box-shadow: 0 0 0 4px rgba(74, 222, 128, .25); }
+    .status.fechado::before { background: #FCA5A5; }
+    .hero__titulo { font-family: var(--fonte-titulo); font-weight: 800; font-size: clamp(2.2rem, 7.5vw, 4rem); line-height: 1.06; letter-spacing: -.01em; }
+    .hero__titulo em { font-style: normal; background: linear-gradient(135deg, var(--ouro-claro), var(--ouro)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero__sub { margin-top: 18px; max-width: 520px; font-size: 1.08rem; color: rgba(255, 255, 255, .85); }
+    .hero__botoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .hero__numeros { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 36px; }
+    .hero__numeros strong { display: block; font-family: var(--fonte-titulo); font-size: 1.7rem; color: var(--ouro-claro); line-height: 1.1; }
+    .hero__numeros span { font-size: .88rem; color: rgba(255, 255, 255, .75); }
+
+    .hero__imagem { position: relative; max-width: 520px; margin-inline: auto; width: 100%; }
+    .hero__imagem img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50% 50% 50% 50% / 46% 46% 54% 54%; box-shadow: 0 30px 60px rgba(0, 0, 0, .45); border: 6px solid rgba(255, 203, 61, .25); }
+    .hero__selo {
+      position: absolute; left: 0; bottom: 8%; background: var(--branco); color: var(--vinho-900); border-radius: 16px; padding: 12px 16px;
+      box-shadow: var(--sombra-forte); font-size: .85rem; line-height: 1.25; animation: flutuar 5s ease-in-out infinite;
+    }
+    .hero__selo strong { display: block; font-family: var(--fonte-titulo); font-size: 1.25rem; color: var(--vinho-500); }
+    @keyframes flutuar { 50% { transform: translateY(-8px); } }
+
+    /* ==========================================================
+       5. FAIXA DE DIFERENCIAIS
+       ========================================================== */
+    .diferenciais { background: var(--branco); border-bottom: 1px solid var(--borda); }
+    .diferenciais__grade { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; padding-block: 28px; }
+    .diferencial { display: flex; align-items: center; gap: 12px; }
+    .diferencial__icone { width: 46px; height: 46px; border-radius: 14px; background: var(--creme-escuro); color: var(--vinho-500); display: grid; place-items: center; flex-shrink: 0; }
+    .diferencial strong { display: block; font-size: .95rem; line-height: 1.25; }
+    .diferencial div span { font-size: .82rem; color: var(--texto-suave); line-height: 1.3; display: block; }
+
+    /* ==========================================================
+       6. CATEGORIAS (filtram a vitrine)
+       ========================================================== */
+    .categorias { display: flex; gap: 12px; overflow-x: auto; padding: 4px 20px 14px; margin-inline: -20px; scroll-snap-type: x proximity; scrollbar-width: thin; }
+    .categoria {
+      flex: 0 0 auto; scroll-snap-align: start; display: flex; align-items: center; gap: 10px; min-height: 60px; padding: 6px 18px 6px 6px;
+      background: var(--branco); border: 2px solid var(--borda); border-radius: 999px; font-weight: 600; white-space: nowrap;
+      transition: border-color var(--transicao), background var(--transicao), color var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+    }
+    .categoria:hover { transform: translateY(-2px); box-shadow: var(--sombra); border-color: var(--ouro); }
+    .categoria img, .categoria__todos { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; background: var(--creme-escuro); }
+    .categoria__todos { display: grid; place-items: center; color: var(--vinho-500); }
+    .categoria small { font-weight: 500; color: var(--texto-suave); margin-left: 2px; }
+    .categoria[aria-pressed="true"] { background: var(--vinho-500); border-color: var(--vinho-500); color: var(--branco); }
+    .categoria[aria-pressed="true"] small { color: rgba(255, 255, 255, .8); }
+
+    /* ==========================================================
+       7. VITRINE DE PRODUTOS
+       ========================================================== */
+    .vitrine__topo { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin: 22px 0 18px; }
+    .vitrine__topo h3 { font-family: var(--fonte-titulo); font-size: 1.4rem; color: var(--vinho-900); }
+    .vitrine__topo p { font-size: .9rem; color: var(--texto-suave); }
+
+    /* Grade: 1 coluna (celular pequeno) → 2 → 3 → 4 */
+    .produtos { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    .produto {
+      position: relative; display: flex; flex-direction: column; background: var(--branco); border-radius: var(--raio);
+      border: 1px solid var(--borda); overflow: hidden; box-shadow: var(--sombra);
+      transition: transform var(--transicao), box-shadow var(--transicao);
+      animation: aparecer .4s ease both;
+    }
+    .produto:hover { transform: translateY(-6px); box-shadow: var(--sombra-forte); }
+    @keyframes aparecer { from { opacity: 0; transform: translateY(14px); } }
+
+    .produto__foto { position: relative; aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--creme-escuro), var(--creme)); overflow: hidden; display: grid; place-items: center; }
+    .produto__foto::before { content: "🍕"; font-size: 2.4rem; opacity: .45; position: absolute; }   /* aparece se a foto não carregar */
+    .produto__foto img { position: relative; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .produto:hover .produto__foto img { transform: scale(1.06); }
+    .produto--bebidas .produto__foto { background: var(--branco); }
+    .produto--bebidas .produto__foto img { object-fit: contain; padding: 10px; }
+
+    .selo { position: absolute; top: 10px; left: 10px; z-index: 1; padding: 4px 10px; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; background: var(--vinho-900); color: var(--ouro-claro); }
+    .selo--promocao { background: var(--vinho-500); color: var(--branco); }
+    .selo--novo { background: #14713F; color: var(--branco); }
+
+    .produto__corpo { display: flex; flex-direction: column; flex: 1; gap: 8px; padding: 14px; }
+    .produto__nome { font-size: 1.02rem; font-weight: 700; line-height: 1.25; }
+    .produto__descricao { font-size: .85rem; color: var(--texto-suave); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* Seletor de tamanho (Grande / Broto, Box Normal / Pequeno…) */
+    .opcoes { display: flex; flex-wrap: wrap; gap: 6px; }
+    .opcao { min-height: 44px; padding: 4px 12px; line-height: 1.15; border-radius: 999px; border: 1.5px solid var(--borda); font-size: .8rem; font-weight: 600; color: var(--texto-suave); transition: all var(--transicao); }
+    .opcao:hover { border-color: var(--ouro); }
+    .opcao[aria-pressed="true"] { background: var(--creme-escuro); border-color: var(--ouro); color: var(--vinho-900); }
+
+    .produto__precos { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; margin-top: auto; padding-top: 4px; }
+    .preco { font-size: 1.25rem; font-weight: 700; color: var(--vinho-500); }
+    .preco-antigo { font-size: .9rem; color: var(--texto-suave); text-decoration: line-through; }
+
+    .produto__botoes { display: grid; gap: 8px; }
+    .produto__botoes .botao { min-height: 44px; padding: 10px 12px; font-size: .9rem; }
+    .botao--adicionado { background: #14713F !important; }
+    .botao-whats-produto { border: 1.5px solid #BFE8CF; color: var(--whatsapp-escuro); background: #F2FBF5; }
+    .botao-whats-produto:hover { background: #E3F7EA; border-color: var(--whatsapp); }
+    .botao-whats-produto .icone { width: 18px; height: 18px; }
+
+    .vitrine__rodape { margin-top: 32px; text-align: center; color: var(--texto-suave); font-size: .92rem; }
+    .vitrine__rodape a { color: var(--vinho-500); font-weight: 700; }
+
+    /* ==========================================================
+       8. SOBRE NÓS
+       ========================================================== */
+    .sobre__grade { display: grid; gap: 36px; align-items: center; }
+    .sobre__imagem { position: relative; }
+    .sobre__imagem img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--raio); box-shadow: var(--sombra-forte); }
+    .sobre__ano { position: absolute; right: 16px; bottom: -18px; background: var(--vinho-500); color: var(--branco); border-radius: 16px; padding: 12px 18px; text-align: center; line-height: 1.1; box-shadow: var(--sombra-forte); }
+    .sobre__ano strong { display: block; font-family: var(--fonte-titulo); font-size: 1.8rem; color: var(--ouro-claro); }
+    .sobre__ano span { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+    .sobre p + p { margin-top: 14px; }
+    .sobre__lista { display: grid; gap: 10px; margin-top: 22px; }
+    .sobre__lista li { display: flex; gap: 10px; align-items: flex-start; }
+    .sobre__lista .icone { color: var(--vinho-500); margin-top: 2px; }
+
+    /* ==========================================================
+       9. DEPOIMENTOS
+       ========================================================== */
+    .depoimentos { display: grid; gap: 18px; }
+    .depoimento { margin: 0; background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px; box-shadow: var(--sombra); transition: transform var(--transicao), box-shadow var(--transicao); }
+    .depoimento:hover { transform: translateY(-4px); box-shadow: var(--sombra-forte); }
+    .estrelas { color: var(--ouro); font-size: 1.1rem; letter-spacing: 2px; }
+    .depoimento blockquote { margin: 12px 0 18px; color: var(--texto); }
+    .depoimento__autor { display: flex; align-items: center; gap: 12px; }
+    .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--vinho-500); color: var(--ouro-claro); display: grid; place-items: center; font-weight: 700; }
+    .depoimento__autor strong { display: block; line-height: 1.2; }
+    .depoimento__autor div span { font-size: .84rem; color: var(--texto-suave); }
+
+    /* ==========================================================
+       10. FAQ (sanfona)
+       ========================================================== */
+    .faq { max-width: 800px; margin-inline: auto; display: grid; gap: 12px; }
+    .faq__item { background: var(--creme); border: 1px solid var(--borda); border-radius: var(--raio-pequeno); overflow: hidden; transition: border-color var(--transicao), box-shadow var(--transicao); }
+    .faq__item.aberto { border-color: var(--ouro); box-shadow: var(--sombra); }
+    .faq__pergunta { width: 100%; min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 18px; text-align: left; font-weight: 700; }
+    .faq__pergunta .icone { color: var(--vinho-500); transition: transform var(--transicao); }
+    .faq__item.aberto .faq__pergunta .icone { transform: rotate(180deg); }
+    .faq__resposta { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .faq__item.aberto .faq__resposta { grid-template-rows: 1fr; }
+    .faq__resposta > div { overflow: hidden; }
+    .faq__resposta p { padding: 0 18px 18px; color: var(--texto-suave); }
+
+    /* ==========================================================
+       11. CHAMADA FINAL + RODAPÉ
+       ========================================================== */
+    .chamada { background: linear-gradient(135deg, var(--vinho-500), var(--vinho-900)); color: var(--branco); border-radius: 24px; padding: 36px 24px; text-align: center; box-shadow: var(--sombra-forte); }
+    .chamada h2 { font-family: var(--fonte-titulo); font-size: clamp(1.5rem, 4.5vw, 2.2rem); line-height: 1.2; }
+    .chamada p { margin: 10px auto 22px; max-width: 520px; color: rgba(255, 255, 255, .85); }
+
+    .rodape { background: var(--vinho-900); color: rgba(255, 255, 255, .82); padding: 56px 0 96px; font-size: .95rem; }
+    .rodape__grade { display: grid; gap: 36px; }
+    .rodape h3 { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ouro-claro); margin-bottom: 14px; }
+    .rodape a { text-decoration: none; transition: color var(--transicao); }
+    .rodape a:hover { color: var(--ouro-claro); }
+    .rodape__lista li { display: flex; gap: 10px; align-items: flex-start; padding-block: 5px; }
+    .rodape__lista a { display: inline-flex; align-items: center; min-height: 34px; }
+    .rodape__lista .icone { width: 20px; height: 20px; color: var(--ouro); margin-top: 7px; }
+    .rodape__lista li.sem-link .icone { margin-top: 3px; }
+    .horarios { display: grid; grid-template-columns: auto auto; gap: 6px 18px; justify-content: start; }
+    .horarios dt { font-weight: 600; color: var(--branco); }
+    .horarios dd { margin: 0; }
+    .redes { display: flex; gap: 10px; margin-top: 18px; }
+    .redes a { width: 46px; height: 46px; border-radius: 50%; background: rgba(255, 255, 255, .1); display: grid; place-items: center; color: var(--branco); transition: background var(--transicao), transform var(--transicao), color var(--transicao); }
+    .redes a:hover { background: var(--ouro-claro); color: var(--vinho-900); transform: translateY(-3px); }
+    .pagamentos { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pagamentos li { padding: 5px 12px; border-radius: 8px; background: rgba(255, 255, 255, .1); font-size: .82rem; font-weight: 600; color: var(--branco); }
+    .rodape__fim { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .14); font-size: .84rem; color: rgba(255, 255, 255, .6); display: grid; gap: 6px; }
+
+    /* ==========================================================
+       12. CARRINHO LATERAL (gaveta)
+       ========================================================== */
+    .fundo-escuro { position: fixed; inset: 0; z-index: 1000; background: rgba(30, 5, 5, .55); opacity: 0; visibility: hidden; transition: opacity var(--transicao), visibility var(--transicao); }
+    .fundo-escuro.visivel { opacity: 1; visibility: visible; }
+    .carrinho {
+      position: fixed; top: 0; right: 0; bottom: 0; z-index: 1001; width: min(430px, 100%); background: var(--branco);
+      display: flex; flex-direction: column; box-shadow: -16px 0 40px rgba(0, 0, 0, .25);
+      transform: translateX(105%); visibility: hidden; transition: transform .35s cubic-bezier(.2, .8, .2, 1), visibility .35s;
+    }
+    .carrinho.aberto { transform: none; visibility: visible; }
+    .carrinho__topo { display: flex; align-items: center; justify-content: space-between; padding: 14px 12px 14px 20px; border-bottom: 1px solid var(--borda); }
+    .carrinho__topo h2 { font-family: var(--fonte-titulo); font-size: 1.35rem; color: var(--vinho-900); }
+    .carrinho__topo .botao-icone { color: var(--texto); }
+    .carrinho__topo .botao-icone:hover { background: var(--creme-escuro); }
+    .carrinho__itens { flex: 1; overflow-y: auto; padding: 8px 20px; overscroll-behavior: contain; }
+    /* Telas baixas (celular deitado): a gaveta inteira rola para o botão de finalizar não sumir */
+    @media (max-height: 620px) { .carrinho { overflow-y: auto; } .carrinho__itens { flex: none; overflow: visible; } }
+    .carrinho__vazio { text-align: center; padding: 56px 12px; color: var(--texto-suave); }
+    .carrinho__vazio span { font-size: 3rem; display: block; margin-bottom: 8px; }
+    .carrinho__vazio .botao { margin-top: 18px; }
+
+    .item { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; padding-block: 14px; border-bottom: 1px solid var(--borda); animation: aparecer .3s ease both; }
+    .item__foto { width: 64px; height: 64px; border-radius: 12px; object-fit: cover; background: var(--creme-escuro); }
+    .item__nome { font-weight: 700; line-height: 1.25; font-size: .95rem; }
+    .item__opcao { font-size: .82rem; color: var(--texto-suave); }
+    .item__unitario { font-size: .82rem; color: var(--texto-suave); }
+    .item__direita { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 6px; }
+    .item__subtotal { font-weight: 700; color: var(--vinho-500); white-space: nowrap; }
+    .quantidade { display: inline-flex; align-items: center; border: 1.5px solid var(--borda); border-radius: 999px; margin-top: 8px; }
+    .quantidade button { width: 44px; height: 44px; font-size: 1.2rem; font-weight: 700; color: var(--vinho-500); border-radius: 50%; transition: background var(--transicao); }
+    .quantidade button:hover { background: var(--creme-escuro); }
+    .quantidade output { min-width: 26px; text-align: center; font-weight: 700; }
+    .item__remover { width: 44px; height: 44px; margin: -10px -10px 0 0; border-radius: 50%; display: grid; place-items: center; color: var(--texto-suave); transition: background var(--transicao), color var(--transicao); }
+    .item__remover:hover { background: #FDE8E8; color: #B42318; }
+    .item__remover .icone { width: 20px; height: 20px; }
+
+    .carrinho__rodape { border-top: 1px solid var(--borda); padding: 14px 20px 12px; background: var(--creme); display: grid; gap: 10px; }
+    .entrega { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; border: 0; padding: 0; margin: 0; }
+    .entrega legend { font-size: .82rem; font-weight: 700; margin-bottom: 6px; padding: 0; }
+    .entrega label { display: flex; align-items: center; justify-content: center; min-height: 44px; border: 1.5px solid var(--borda); border-radius: 12px; background: var(--branco); font-weight: 600; font-size: .92rem; cursor: pointer; transition: all var(--transicao); }
+    .entrega input { position: absolute; opacity: 0; }
+    .entrega input:checked + label { border-color: var(--vinho-500); background: #FFF0F0; color: var(--vinho-500); }
+    .entrega input:focus-visible + label { outline: 3px solid var(--ouro); outline-offset: 2px; }
+    .campo label { display: block; font-size: .82rem; font-weight: 700; margin-bottom: 6px; }
+    .campo textarea { width: 100%; height: 46px; min-height: 46px; resize: vertical; padding: 10px 12px; border: 1.5px solid var(--borda); border-radius: 12px; font: inherit; font-size: .92rem; background: var(--branco); color: var(--texto); }
+    .campo textarea:focus { outline: none; border-color: var(--ouro); box-shadow: 0 0 0 3px rgba(245, 162, 27, .25); }
+    .total { display: flex; align-items: baseline; justify-content: space-between; }
+    .total span { font-weight: 600; }
+    .total strong { font-size: 1.5rem; color: var(--vinho-500); }
+    .carrinho__aviso { font-size: .8rem; color: var(--texto-suave); text-align: center; line-height: 1.4; }
+    .link-limpar { justify-self: center; min-height: 44px; margin-top: -6px; padding: 0 12px; font-size: .88rem; color: var(--texto-suave); text-decoration: underline; }
+    .link-limpar:hover { color: #B42318; }
+
+    /* ==========================================================
+       13. BOTÃO FLUTUANTE DO WHATSAPP + AVISO (toast)
+       ========================================================== */
+    .whats-flutuante {
+      position: fixed; right: 18px; bottom: 18px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%;
+      background: var(--whatsapp); color: var(--branco); display: grid; place-items: center; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .25); transition: transform var(--transicao), opacity var(--transicao), visibility var(--transicao);
+    }
+    .whats-flutuante::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--whatsapp); z-index: -1; animation: pulso 2.2s ease-out infinite; }
+    @keyframes pulso { 0% { transform: scale(1); opacity: .6; } 70%, 100% { transform: scale(1.7); opacity: 0; } }
+    .whats-flutuante .icone { width: 32px; height: 32px; }
+    .whats-flutuante:hover { transform: scale(1.08); }
+    .whats-flutuante__balao {
+      position: absolute; right: calc(100% + 12px); top: 50%; transform: translateY(-50%) translateX(8px); white-space: nowrap;
+      background: var(--branco); color: var(--texto); font-weight: 700; font-size: .9rem; padding: 8px 14px; border-radius: 12px;
+      box-shadow: var(--sombra-forte); opacity: 0; pointer-events: none; transition: opacity var(--transicao), transform var(--transicao);
+    }
+    .whats-flutuante__balao::after { content: ""; position: absolute; left: 100%; top: 50%; margin-top: -6px; border: 6px solid transparent; border-left-color: var(--branco); }
+    .whats-flutuante:hover .whats-flutuante__balao, .whats-flutuante:focus-visible .whats-flutuante__balao { opacity: 1; transform: translateY(-50%); }
+    /* Com o carrinho aberto o botão sai da frente do "Finalizar pedido" */
+    body.carrinho-aberto .whats-flutuante { opacity: 0; visibility: hidden; transform: scale(.6); }
+
+    .aviso {
+      position: fixed; left: 50%; bottom: 24px; z-index: 9998; transform: translate(-50%, 30px); max-width: calc(100% - 110px);
+      background: var(--vinho-900); color: var(--branco); padding: 12px 18px; border-radius: 14px; font-weight: 600; font-size: .92rem;
+      box-shadow: var(--sombra-forte); opacity: 0; visibility: hidden; transition: all .3s ease; display: flex; align-items: center; gap: 12px;
+    }
+    .aviso.visivel { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+    .aviso button { color: var(--ouro-claro); font-weight: 700; text-decoration: underline; white-space: nowrap; min-height: 32px; }
+
+    /* ==========================================================
+       14. ANIMAÇÃO AO ROLAR (só ativa se o JavaScript carregar)
+       ========================================================== */
+    .js .revelar { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
+    .js .revelar.visivel { opacity: 1; transform: none; }
+
+    /* ==========================================================
+       15. RESPONSIVIDADE (mobile-first)
+       ========================================================== */
+    /* Celular pequeno (até 480px): textos e botões um pouco mais compactos */
+    @media (max-width: 480px) {
+      .secao { padding-block: 52px; }
+      .hero__botoes .botao { width: 100%; }
+      .hero__selo { left: -4px; }
+    }
+    /* Celular comum e tablet: 2 colunas de produtos */
+    @media (min-width: 380px) {
+      .produtos { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+    @media (min-width: 380px) and (max-width: 599px) {
+      .texto-longo { display: none; }
+      .produto__corpo { gap: 6px; }
+      .produto__corpo { padding: 12px; }
+      .produto__nome { font-size: .95rem; }
+      .produto__descricao { -webkit-line-clamp: 2; font-size: .8rem; }
+      .preco { font-size: 1.12rem; }
+      .produto__botoes .botao { font-size: .82rem; padding-inline: 8px; gap: 5px; }
+      .opcoes { display: grid; grid-template-columns: 1fr 1fr; }
+      .opcao { padding-inline: 6px; font-size: .76rem; }
+    }
+    @media (min-width: 600px) {
+      .diferenciais__grade { gap: 24px; }
+      .depoimentos { grid-template-columns: repeat(2, 1fr); }
+      .rodape__grade { grid-template-columns: repeat(2, 1fr); }
+      .produtos { gap: 20px; }
+    }
+    /* Notebook (769px a 1024px): 3 colunas */
+    @media (min-width: 769px) {
+      .secao { padding-block: 88px; }
+      .produtos { grid-template-columns: repeat(3, 1fr); }
+      .diferenciais__grade { grid-template-columns: repeat(4, 1fr); }
+      .sobre__grade { grid-template-columns: 1fr 1fr; gap: 56px; }
+      .depoimentos { grid-template-columns: repeat(3, 1fr); }
+      .categorias { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding-inline: 0; }
+      .chamada { padding: 56px 40px; }
+    }
+    @media (min-width: 900px) {
+      :root { --altura-cabecalho: 76px; }
+      .hero { padding-top: calc(var(--altura-cabecalho) + 64px); padding-bottom: 96px; }
+      .hero__grade { grid-template-columns: 1.05fr .95fr; gap: 56px; }
+      .hamburguer { display: none; }
+      .menu { position: static; padding: 0; background: none; box-shadow: none; transform: none; opacity: 1; visibility: visible; }
+      .menu__lista { display: flex; gap: 4px; }
+      .menu__lista a { border: 0; padding: 8px 14px; border-radius: 999px; font-size: .95rem; }
+      .menu__lista a:hover, .menu__lista a.ativo { background: rgba(255, 255, 255, .1); }
+      .logo__nome { font-size: 2.15rem; }
+    }
+    /* Desktop (acima de 1024px): 4 colunas */
+    @media (min-width: 1025px) {
+      .produtos { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+      .rodape__grade { grid-template-columns: 1.3fr 1fr 1fr 1.1fr; }
+      .rodape { padding-bottom: 56px; }
+    }
+
+    /* Respeita quem prefere menos animação */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .js .revelar { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===== Ícones em SVG (reutilizados com <use>) ===== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+    <symbol id="i-carrinho" viewBox="0 0 24 24"><path d="M7 18a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4zM7.2 14.6l.03-.12L8.1 13h7.45a2 2 0 001.75-1.03l3.58-6.49A1 1 0 0020 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44A2 2 0 007 17h12v-2H7.42a.25.25 0 01-.22-.4z"/></symbol>
+    <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M18.3 5.7a1 1 0 00-1.4 0L12 10.6 7.1 5.7a1 1 0 10-1.4 1.4l4.9 4.9-4.9 4.9a1 1 0 101.4 1.4l4.9-4.9 4.9 4.9a1 1 0 001.4-1.4L13.4 12l4.9-4.9a1 1 0 000-1.4z"/></symbol>
+    <symbol id="i-lixeira" viewBox="0 0 24 24"><path d="M9 3h6l1 2h4v2H4V5h4l1-2zM6 9h12l-1 11a2 2 0 01-2 2H9a2 2 0 01-2-2L6 9zm4 2v8h1.5v-8H10zm2.5 0v8H14v-8h-1.5z"/></symbol>
+    <symbol id="i-seta" viewBox="0 0 24 24"><path d="M12 15.5a1 1 0 01-.7-.3l-5-5a1 1 0 111.4-1.4l4.3 4.3 4.3-4.3a1 1 0 111.4 1.4l-5 5a1 1 0 01-.7.3z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M9.5 16.6L5.4 12.5a1 1 0 10-1.4 1.4l4.8 4.8a1 1 0 001.4 0L20 8.9a1 1 0 10-1.4-1.4l-9.1 9.1z"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm.9-12.5h-1.8v5.3l4.5 2.7.9-1.5-3.6-2.1V7.5z"/></symbol>
+    <symbol id="i-moto" viewBox="0 0 24 24"><path d="M19 7c0-1.1-.9-2-2-2h-3v2h3v2.65L13.52 14H10V9H6a4 4 0 00-4 4v3h2a3 3 0 006 0h4.48L19 10.35V7zM7 17a1 1 0 01-1-1h2a1 1 0 01-1 1zM5 6h5v2H5V6zm14 7a3 3 0 100 6 3 3 0 000-6zm0 4a1 1 0 110-2 1 1 0 010 2z"/></symbol>
+    <symbol id="i-cartao" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2zM6 14h5v2H6v-2z"/></symbol>
+    <symbol id="i-trofeu" viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5a2 2 0 00-2 2v1a4 4 0 003.4 3.95A5 5 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5 5 0 004.6-3.95A4 4 0 0021 8V7a2 2 0 00-2-2zM5 8V7h2v2.82A2 2 0 015 8zm14 0a2 2 0 01-2 1.82V7h2v1z"/></symbol>
+    <symbol id="i-local" viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+    <symbol id="i-telefone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1L6.6 10.8z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm5.25-3.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0022 12z"/></symbol>
+    <symbol id="i-grade" viewBox="0 0 24 24"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/></symbol>
+  </svg>
+
+  <!-- ==========================================================
+       CABEÇALHO FIXO
+       ========================================================== -->
+  <header class="cabecalho" id="cabecalho">
+    <div class="container cabecalho__interno">
+      <a class="logo" href="#inicio" aria-label="Brunelli Pizzaria – voltar ao início">
+        <span class="logo__nome">Brunelli</span>
+        <span class="logo__sub">Pizzaria</span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Navegação principal">
+        <ul class="menu__lista">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="cabecalho__acoes">
+        <button class="botao-icone" id="abrir-carrinho" type="button" aria-label="Abrir carrinho" aria-haspopup="dialog" aria-controls="carrinho">
+          <svg class="icone" aria-hidden="true"><use href="#i-carrinho"/></svg>
+          <span class="contador" id="contador" hidden>0</span>
+        </button>
+        <button class="botao-icone hamburguer" id="hamburguer" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ==========================================================
+         HERO
+         ========================================================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grade">
+        <div>
+          <p class="status" id="status" role="status">Seg a sáb, a partir das 18h</p>
+          <h1 class="hero__titulo">A paixão por pizza, <em>desde 1997</em>.</h1>
+          <p class="hero__sub">Mais de 60 sabores de pizza, esfihas e comida chinesa feitos na hora e entregues quentinhos na zona sul de São Paulo.</p>
+          <div class="hero__botoes">
+            <a class="botao botao--ouro" href="#cardapio">Ver cardápio</a>
+            <a class="botao botao--contorno" data-whats="padrao" href="https://wa.me/5511952274969" target="_blank" rel="noopener">
+              <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir pelo WhatsApp
+            </a>
+          </div>
+          <ul class="hero__numeros" aria-label="Destaques">
+            <li><strong>60+</strong><span>sabores de pizza</span></li>
+            <li><strong>35–40 min</strong><span>tempo médio de entrega</span></li>
+            <li><strong id="anos-casa">28 anos</strong><span>de tradição</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__imagem">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=70"
+               srcset="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=520&q=70 520w, https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=70 900w"
+               sizes="(min-width: 900px) 480px, 90vw"
+               width="900" height="900" fetchpriority="high"
+               alt="Pizza de queijo recém-saída do forno, cortada em fatias sobre tábua de madeira">
+          <p class="hero__selo"><strong>Até 3 sabores</strong>na pizza grande de 35 cm</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         DIFERENCIAIS
+         ========================================================== -->
+    <section class="diferenciais" aria-label="Nossos diferenciais">
+      <ul class="container diferenciais__grade">
+        <li class="diferencial revelar">
+          <span class="diferencial__icone"><svg class="icone" aria-hidden="true"><use href="#i-trofeu"/></svg></span>
+          <div><strong>Tradição desde 1997</strong><span>Receitas da casa, sabor autêntico</span></div>
+        </li>
+        <li class="diferencial revelar">
+          <span class="diferencial__icone"><svg class="icone" aria-hidden="true"><use href="#i-moto"/></svg></span>
+          <div><strong>Entrega em 35–40 min</strong><span>Ou retire em 15–20 min</span></div>
+        </li>
+        <li class="diferencial revelar">
+          <span class="diferencial__icone"><svg class="icone" aria-hidden="true"><use href="#i-cartao"/></svg></span>
+          <div><strong>Pague na entrega</strong><span>Cartão, dinheiro ou vale-refeição</span></div>
+        </li>
+        <li class="diferencial revelar">
+          <span class="diferencial__icone"><svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+          <div><strong>Pedido pelo WhatsApp</strong><span>Atendimento rápido e direto</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==========================================================
+         CARDÁPIO: CATEGORIAS + VITRINE
+         ========================================================== -->
+    <section class="secao" id="cardapio">
+      <div class="container">
+        <div class="cabecalho-secao revelar">
+          <span class="sobretitulo">Cardápio</span>
+          <h2 class="titulo-secao">Escolha, monte o pedido e finalize no WhatsApp</h2>
+          <p class="texto-secao">Toque em uma categoria para filtrar. Nas pizzas você escolhe entre Grande (35 cm, 8 fatias) e Broto (25 cm, 4 fatias).</p>
+        </div>
+
+        <!-- Cards de categoria (preenchidos pelo JavaScript) -->
+        <div class="categorias" id="categorias" role="group" aria-label="Filtrar cardápio por categoria"></div>
+
+        <div class="vitrine__topo">
+          <h3 id="titulo-vitrine">Todos os produtos</h3>
+          <p id="total-vitrine" aria-live="polite"></p>
+        </div>
+
+        <!-- Grade de produtos (preenchida pelo JavaScript) -->
+        <div class="produtos" id="produtos"></div>
+        <noscript><p>Ative o JavaScript para ver o cardápio, ou peça direto pelo WhatsApp (11) 95227-4969.</p></noscript>
+
+        <p class="vitrine__rodape">
+          Não achou seu sabor? São mais de 60 opções —
+          <a data-whats="cardapio" href="https://wa.me/5511952274969" target="_blank" rel="noopener">peça o cardápio completo pelo WhatsApp</a>.
+          <br>Valores sujeitos a alteração sem aviso prévio.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SOBRE NÓS
+         ========================================================== -->
+    <section class="secao secao--clara sobre" id="sobre">
+      <div class="container sobre__grade">
+        <div class="sobre__imagem revelar">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=70" width="900" height="675" loading="lazy"
+               alt="Pizza marguerita com manjericão fresco e mussarela derretida">
+          <p class="sobre__ano"><strong>1997</strong><span>Ano de fundação</span></p>
+        </div>
+        <div class="revelar">
+          <span class="sobretitulo">Sobre nós</span>
+          <h2 class="titulo-secao">Uma tradição do bairro que a gente carrega com orgulho</h2>
+          <p class="texto-secao">Fundada em 1997 no Parque Arariba, a Brunelli nasceu da paixão por pizza. De lá para cá o cardápio cresceu — hoje são dezenas de sabores criativos de pizza, esfihas e uma linha completa de comida chinesa — mas a receita do sucesso continua a mesma: sabor autêntico e ingredientes de qualidade.</p>
+          <p class="texto-secao">Seguimos trabalhando todos os dias, com muito prazer, para entregar o melhor para você e sua família.</p>
+          <ul class="sobre__lista">
+            <li><svg class="icone" aria-hidden="true"><use href="#i-check"/></svg><span>Pizzas grandes com até 3 sabores e borda recheada de catupiry ou cheddar</span></li>
+            <li><svg class="icone" aria-hidden="true"><use href="#i-check"/></svg><span>Yakisobas, pratos e rolinhos preparados na hora</span></li>
+            <li><svg class="icone" aria-hidden="true"><use href="#i-check"/></svg><span>Salão de festas próprio com 247 m² para o seu evento</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         DEPOIMENTOS
+         ========================================================== -->
+    <section class="secao" id="depoimentos">
+      <div class="container">
+        <div class="cabecalho-secao cabecalho-secao--centro revelar">
+          <span class="sobretitulo">Depoimentos</span>
+          <h2 class="titulo-secao">Quem pede, volta a pedir</h2>
+        </div>
+        <div class="depoimentos">
+          <figure class="depoimento revelar">
+            <p class="estrelas" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</p>
+            <blockquote>“Peço na Brunelli há anos. A Brunelli 2 com borda de catupiry é a preferida aqui de casa e sempre chega quentinha.”</blockquote>
+            <figcaption class="depoimento__autor"><span class="avatar" aria-hidden="true">MS</span><div><strong>Mariana S.</strong><span>Parque Arariba</span></div></figcaption>
+          </figure>
+          <figure class="depoimento revelar">
+            <p class="estrelas" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</p>
+            <blockquote>“Poder pedir pizza e yakisoba no mesmo lugar resolve o jantar de todo mundo. O yakisoba clássico vem muito bem servido.”</blockquote>
+            <figcaption class="depoimento__autor"><span class="avatar" aria-hidden="true">RA</span><div><strong>Rafael A.</strong><span>Vila Andrade</span></div></figcaption>
+          </figure>
+          <figure class="depoimento revelar">
+            <p class="estrelas" role="img" aria-label="Avaliação: 4 de 5 estrelas">★★★★☆</p>
+            <blockquote>“Atendimento rápido pelo WhatsApp e entrega dentro do prazo. As esfihas doces são um perigo, peço sempre de sobremesa!”</blockquote>
+            <figcaption class="depoimento__autor"><span class="avatar" aria-hidden="true">CL</span><div><strong>Camila L.</strong><span>Jardim Umarizal</span></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         FAQ (sanfona)
+         ========================================================== -->
+    <section class="secao secao--clara" id="duvidas">
+      <div class="container">
+        <div class="cabecalho-secao cabecalho-secao--centro revelar">
+          <span class="sobretitulo">Dúvidas</span>
+          <h2 class="titulo-secao">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq revelar" id="faq">
+          <div class="faq__item">
+            <h3><button class="faq__pergunta" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-b1">Como faço meu pedido?<svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></button></h3>
+            <div class="faq__resposta" id="faq-1" role="region" aria-labelledby="faq-b1"><div><p>Adicione os produtos ao carrinho e toque em “Finalizar pedido pelo WhatsApp”. A mensagem já chega pronta com os itens e o total; é só enviar e nos informar o endereço. Se preferir, ligue para (11) 5511-8846.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__pergunta" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-b2">Quais bairros vocês atendem e qual é a taxa de entrega?<svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></button></h3>
+            <div class="faq__resposta" id="faq-2" role="region" aria-labelledby="faq-b2"><div><p>Entregamos na zona sul de São Paulo — Parque Arariba, Campo Limpo, Vila Andrade, Morumbi, Paraisópolis, Capão Redondo, Santo Amaro e região — e em parte de Taboão da Serra. A taxa varia conforme o bairro, a partir de R$ 5,00, e é confirmada pelo WhatsApp antes de fecharmos o pedido.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__pergunta" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-b3">Qual é o horário de funcionamento?<svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></button></h3>
+            <div class="faq__resposta" id="faq-3" role="region" aria-labelledby="faq-b3"><div><p>De segunda a quinta, das 18h às 23h. Sextas e sábados, das 18h à meia-noite. Aos domingos estamos fechados.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__pergunta" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-b4">Posso pedir pizza meio a meio? E borda recheada?<svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></button></h3>
+            <div class="faq__resposta" id="faq-4" role="region" aria-labelledby="faq-b4"><div><p>Pode! A pizza grande (35 cm) aceita até 3 sabores e a broto (25 cm) até 2 — vale o preço do sabor mais caro. A borda recheada de catupiry ou cheddar custa R$ 14,00 na grande e R$ 8,00 na broto. É só escrever no campo de observações do carrinho.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__pergunta" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-b5">Quais formas de pagamento vocês aceitam?<svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></button></h3>
+            <div class="faq__resposta" id="faq-5" role="region" aria-labelledby="faq-b5"><div><p>Dinheiro, cartões de crédito e débito (Visa, Mastercard, Elo, American Express e Hipercard) e vale-refeição (Alelo, Sodexo, Ticket, VR e Ben). O pagamento é feito na entrega ou na retirada.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__pergunta" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-b6">Quanto tempo demora a entrega?<svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></button></h3>
+            <div class="faq__resposta" id="faq-6" role="region" aria-labelledby="faq-b6"><div><p>Em média de 35 a 40 minutos, podendo variar em dias de muito movimento ou chuva. Para retirar no balcão, o pedido costuma ficar pronto em 15 a 20 minutos.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__pergunta" type="button" aria-expanded="false" aria-controls="faq-7" id="faq-b7">Vocês têm salão de festas?<svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></button></h3>
+            <div class="faq__resposta" id="faq-7" role="region" aria-labelledby="faq-b7"><div><p>Sim. O Salão de Festas Brunelli tem 247 m², com mesas, cadeiras, banheiros, cozinha equipada e churrasqueira, para eventos particulares ou empresariais, infantis ou adultos. Consulte datas e valores pelo WhatsApp.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CHAMADA FINAL
+         ========================================================== -->
+    <section class="secao" aria-labelledby="titulo-chamada">
+      <div class="container">
+        <div class="chamada revelar">
+          <h2 id="titulo-chamada">Bateu a fome? A gente resolve.</h2>
+          <p>Chame no WhatsApp e receba sua pizza quentinha em casa.</p>
+          <a class="botao botao--ouro" data-whats="padrao" href="https://wa.me/5511952274969" target="_blank" rel="noopener">
+            <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir agora
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       RODAPÉ
+       ========================================================== -->
+  <footer class="rodape" id="contato">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <a class="logo" href="#inicio" aria-label="Brunelli Pizzaria – voltar ao início">
+            <span class="logo__nome">Brunelli</span>
+            <span class="logo__sub">Pizzaria</span>
+          </a>
+          <p style="margin-top:16px;max-width:320px">Pizzas, esfihas e comida chinesa com a tradição de quem está no bairro desde 1997.</p>
+          <div class="redes">
+            <a href="https://www.instagram.com/pizzariabrunelli/" target="_blank" rel="noopener" aria-label="Instagram da Brunelli Pizzaria"><svg class="icone" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+            <a href="https://www.facebook.com/brunellipizzas/" target="_blank" rel="noopener" aria-label="Facebook da Brunelli Pizzaria"><svg class="icone" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+            <a data-whats="padrao" href="https://wa.me/5511952274969" target="_blank" rel="noopener" aria-label="WhatsApp da Brunelli Pizzaria"><svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+          <ul class="rodape__lista">
+            <li><svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg><a data-whats="padrao" href="https://wa.me/5511952274969" target="_blank" rel="noopener">(11) 95227-4969 (WhatsApp)</a></li>
+            <li><svg class="icone" aria-hidden="true"><use href="#i-telefone"/></svg><a href="tel:+551155118846">(11) 5511-8846</a></li>
+            <li><svg class="icone" aria-hidden="true"><use href="#i-telefone"/></svg><a href="tel:+551158169646">(11) 5816-9646</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Horário</h3>
+          <dl class="horarios">
+            <dt>Seg a qui</dt><dd>18h às 23h</dd>
+            <dt>Sex e sáb</dt><dd>18h às 00h</dd>
+            <dt>Domingo</dt><dd>Fechado</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h3>Endereço e entrega</h3>
+          <ul class="rodape__lista">
+            <li><svg class="icone" aria-hidden="true"><use href="#i-local"/></svg>
+              <a href="https://www.google.com/maps/search/?api=1&query=Av.+Lucilo+de+Almeida,+237+-+Parque+Arariba,+S%C3%A3o+Paulo+-+SP" target="_blank" rel="noopener">Av. Lucilo de Almeida, 237 – Parque Arariba, São Paulo – SP, 05778-250</a></li>
+            <li class="sem-link"><svg class="icone" aria-hidden="true"><use href="#i-moto"/></svg><span>Entregamos na zona sul de São Paulo e em parte de Taboão da Serra</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:36px">
+        <h3>Formas de pagamento</h3>
+        <ul class="pagamentos">
+          <li>Dinheiro</li><li>Visa</li><li>Mastercard</li><li>Elo</li><li>American Express</li><li>Hipercard</li>
+          <li>Alelo</li><li>Sodexo</li><li>Ticket</li><li>VR</li><li>Ben</li>
+        </ul>
+      </div>
+
+      <div class="rodape__fim">
+        <p>© <span id="ano">2026</span> Brunelli Pizzaria. Todos os direitos reservados.</p>
+        <p>Imagens meramente ilustrativas. Valores sujeitos a alteração sem aviso prévio.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       CARRINHO LATERAL (gaveta)
+       ========================================================== -->
+  <div class="fundo-escuro" id="fundo-escuro"></div>
+  <aside class="carrinho" id="carrinho" role="dialog" aria-modal="true" aria-labelledby="titulo-carrinho" tabindex="-1">
+    <div class="carrinho__topo">
+      <h2 id="titulo-carrinho">Seu pedido</h2>
+      <button class="botao-icone" id="fechar-carrinho" type="button" aria-label="Fechar carrinho"><svg class="icone" aria-hidden="true"><use href="#i-fechar"/></svg></button>
+    </div>
+
+    <div class="carrinho__itens" id="itens-carrinho"></div>
+
+    <div class="carrinho__rodape" id="rodape-carrinho">
+      <fieldset class="entrega">
+        <legend>Como você quer receber?</legend>
+        <div><input type="radio" name="entrega" id="op-entrega" value="Entrega" checked><label for="op-entrega">Entrega</label></div>
+        <div><input type="radio" name="entrega" id="op-retirada" value="Retirada no balcão"><label for="op-retirada">Retirada</label></div>
+      </fieldset>
+      <div class="campo">
+        <label for="observacoes">Observações (opcional)</label>
+        <textarea id="observacoes" maxlength="300" placeholder="Ex.: meio a meio, borda de catupiry, sem cebola…"></textarea>
+      </div>
+      <p class="total"><span>Total dos itens</span><strong id="total-carrinho">R$ 0,00</strong></p>
+      <button class="botao botao--whats botao--largo" id="finalizar" type="button">
+        <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg> Finalizar pedido pelo WhatsApp
+      </button>
+      <p class="carrinho__aviso">A taxa de entrega varia por bairro e é confirmada no WhatsApp.</p>
+      <button class="link-limpar" id="limpar-carrinho" type="button">Esvaziar carrinho</button>
+    </div>
+  </aside>
+
+  <!-- Aviso rápido ao adicionar um produto -->
+  <div class="aviso" id="aviso" role="status" aria-live="polite">
+    <span id="aviso-texto"></span>
+    <button type="button" id="aviso-ver">Ver carrinho</button>
+  </div>
+
+  <!-- ==========================================================
+       BOTÃO FLUTUANTE DO WHATSAPP
+       ========================================================== -->
+  <a class="whats-flutuante" data-whats="padrao" href="https://wa.me/5511952274969" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+    <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="whats-flutuante__balao" aria-hidden="true">Fale conosco!</span>
+  </a>
+
+  <script>
+    /* ==========================================================
+       1. CONFIGURAÇÕES DA LOJA — edite aqui
+       ========================================================== */
+    const CONFIG = {
+      nomeLoja: 'Brunelli Pizzaria',
+      // Número do WhatsApp: código do país (55) + DDD + número, só dígitos
+      whatsapp: '5511952274969',
+      mensagemPadrao: 'Olá! Vim pelo site da Brunelli Pizzaria e gostaria de mais informações.',
+      anoFundacao: 1997,
+      // Horário de funcionamento: [abre, fecha] em horas. 0 = domingo … 6 = sábado. null = fechado
+      horarios: { 0: null, 1: [18, 23], 2: [18, 23], 3: [18, 23], 4: [18, 23], 5: [18, 24], 6: [18, 24] }
+    };
+
+    // Pasta das fotos reais dos produtos (as mesmas do cardápio online da loja)
+    const FOTOS = 'https://client-assets.anota.ai/produtos/645ad6913b437c0012585d7d/';
+
+    /* ==========================================================
+       2. CATEGORIAS — id, nome e foto do card
+       ========================================================== */
+    const CATEGORIAS = [
+      { id: 'pizzas',  nome: 'Pizzas salgadas', imagem: FOTOS + '-1726189312135blob' },
+      { id: 'doces',   nome: 'Pizzas doces',    imagem: FOTOS + '-1726181277273blob' },
+      { id: 'esfihas', nome: 'Esfihas',         imagem: FOTOS + '6463bc4bb413a603e69e7a1e/6463bc4bb413a661629e7a3eblob' },
+      { id: 'chinesa', nome: 'Comida chinesa',  imagem: FOTOS + '6463bc4bb413a6f7919e7a1f/6463bc4bb413a617289e7ab5blob' },
+      { id: 'bebidas', nome: 'Bebidas',         imagem: FOTOS + '6463bc4bb413a64a1a9e7a3d/6463bc4fb413a683319e806bblob' },
+      { id: 'combos',  nome: 'Promoções',       imagem: FOTOS + '-1783556968742blob' }
+    ];
+
+    /* ==========================================================
+       3. PRODUTOS — edite, adicione ou remova à vontade
+       Campos:
+         id          → identificador único (sem espaços)
+         nome        → nome exibido
+         descricao   → ingredientes / detalhes
+         categoria   → um dos ids de CATEGORIAS
+         preco       → preço (use ponto: 59.9). Ignorado se houver "opcoes"
+         precoAntigo → (opcional) preço riscado, para promoções
+         imagem      → link da foto
+         selo        → (opcional) 'Promoção', 'Novo' ou outro texto curto
+         opcoes      → (opcional) tamanhos: [{ nome, preco }, …]
+       ========================================================== */
+    // Atalhos para os tamanhos mais comuns
+    const pizza = (grande, broto) => [{ nome: 'Grande 35 cm', preco: grande }, { nome: 'Broto 25 cm', preco: broto }];
+    const box = (normal, pequeno) => [{ nome: 'Box normal', preco: normal }, { nome: 'Box pequeno', preco: pequeno }];
+    const boxGJ = (grande, junior) => [{ nome: 'Box grande', preco: grande }, { nome: 'Box júnior', preco: junior }];
+
+    const PRODUTOS = [
+      /* ---------- Promoções ---------- */
+      { id: 'combo-meia-guarana', nome: 'Combo ½ Mussarela ½ Calabresa + Guaraná 2 L', descricao: 'Pizza grande meio a meio com Guaraná Antarctica 2 L. Os itens do combo não podem ser alterados.', categoria: 'combos', preco: 63, precoAntigo: 74, imagem: FOTOS + '-1783556968742blob', selo: 'Promoção' },
+
+      /* ---------- Pizzas salgadas ---------- */
+      { id: 'pz-calabresa',   nome: 'Calabresa',            descricao: 'Molho, calabresa, cebola e azeitonas.',                                 categoria: 'pizzas', opcoes: pizza(50, 36),  imagem: FOTOS + '-1726189312135blob', selo: 'Clássica' },
+      { id: 'pz-mussarela',   nome: 'Mussarela',            descricao: 'Molho, mussarela, tomate, orégano e azeitonas.',                        categoria: 'pizzas', opcoes: pizza(59, 41),  imagem: FOTOS + '-1726180319366blob' },
+      { id: 'pz-marguerita',  nome: 'Marguerita',           descricao: 'Molho, mussarela, manjericão, parmesão, tomate e azeitonas.',           categoria: 'pizzas', opcoes: pizza(71, 49),  imagem: FOTOS + '-1726180362102blob' },
+      { id: 'pz-portuguesa',  nome: 'Portuguesa',           descricao: 'Molho, mussarela, presunto, ovos, cebola, ervilha e azeitonas.',        categoria: 'pizzas', opcoes: pizza(69, 48),  imagem: FOTOS + '-1726180474905blob' },
+      { id: 'pz-frango',      nome: 'Frango com Catupiry',  descricao: 'Molho, frango desfiado, catupiry e azeitonas.',                         categoria: 'pizzas', opcoes: pizza(74, 53),  imagem: FOTOS + '-1726180163142blob' },
+      { id: 'pz-brunelli1',   nome: 'Brunelli 1',           descricao: 'Molho, catupiry, presunto, champignon, bacon e azeitonas.',             categoria: 'pizzas', opcoes: pizza(83, 58),  imagem: FOTOS + '-1726180045646blob', selo: 'Da casa' },
+      { id: 'pz-brunelli2',   nome: 'Brunelli 2',           descricao: 'Molho, mussarela, presunto, palmito, bacon e azeitonas.',               categoria: 'pizzas', opcoes: pizza(92, 66),  imagem: FOTOS + '-1726180064391blob', selo: 'Da casa' },
+      { id: 'pz-4queijos',    nome: 'Quatro Queijos',       descricao: 'Molho, mussarela, catupiry, provolone, parmesão e azeitonas.',          categoria: 'pizzas', opcoes: pizza(89, 64),  imagem: FOTOS + '-1726180498986blob' },
+      { id: 'pz-toscana',     nome: 'Toscana',              descricao: 'Molho, calabresa fatiada, mussarela e azeitonas.',                      categoria: 'pizzas', opcoes: pizza(67, 46),  imagem: FOTOS + '-1726180571270blob' },
+      { id: 'pz-bacon',       nome: 'Bacon',                descricao: 'Molho, mussarela, bacon, ovos e azeitonas.',                            categoria: 'pizzas', opcoes: pizza(74, 53),  imagem: FOTOS + '-1726180011099blob' },
+      { id: 'pz-pepperoni',   nome: 'Pepperoni',            descricao: 'Molho, pepperoni, mussarela e azeitonas.',                              categoria: 'pizzas', opcoes: pizza(87, 59),  imagem: FOTOS + '-1726180852680blob' },
+      { id: 'pz-rucula',      nome: 'Rúcula',               descricao: 'Molho, rúcula, mussarela de búfala, tomate seco e azeitonas.',          categoria: 'pizzas', opcoes: pizza(72, 50),  imagem: FOTOS + '-1726190288707blob' },
+      { id: 'pz-lampiao',     nome: 'Lampião',              descricao: 'Molho, carne seca, ovos, cebola e azeitonas.',                          categoria: 'pizzas', opcoes: pizza(71, 49),  imagem: FOTOS + '-1726190881620blob' },
+      { id: 'pz-camarao',     nome: 'Camarão',              descricao: 'Molho, camarões selecionados, mussarela e azeitonas.',                  categoria: 'pizzas', opcoes: pizza(115, 77), imagem: FOTOS + '-1726190322674blob' },
+
+      /* ---------- Pizzas doces ---------- */
+      { id: 'dc-brigadeiro',  nome: 'Brigadeiro',           descricao: 'Chocolate ao leite derretido e granulado.',                             categoria: 'doces', opcoes: pizza(55, 36), imagem: FOTOS + '-1726181277273blob' },
+      { id: 'dc-banana-choc', nome: 'Banana com Chocolate', descricao: 'Banana assada coberta com chocolate ao leite derretido.',               categoria: 'doces', opcoes: pizza(56, 38), imagem: FOTOS + '-1726181337935blob' },
+      { id: 'dc-romeu',       nome: 'Romeu e Julieta',      descricao: 'Mussarela e pedaços de goiabada natural.',                              categoria: 'doces', opcoes: pizza(58, 39), imagem: FOTOS + '-1726181311511blob' },
+      { id: 'dc-prestigio',   nome: 'Prestígio',            descricao: 'Chocolate ao leite derretido e coco ralado.',                           categoria: 'doces', opcoes: pizza(56, 36), imagem: FOTOS + '-1726181396927blob' },
+      { id: 'dc-mms',         nome: 'M&M’s',                descricao: 'Chocolate ao leite derretido e M&M’s original.',                        categoria: 'doces', opcoes: pizza(65, 45), imagem: FOTOS + '-1726181543093blob' },
+
+      /* ---------- Esfihas ---------- */
+      { id: 'es-carne',       nome: 'Esfiha de Carne',      descricao: 'Carne temperada, tomate e cebola.',                                     categoria: 'esfihas', preco: 4,   imagem: FOTOS + '6463bc4bb413a603e69e7a1e/6463bc4bb413a661629e7a3eblob' },
+      { id: 'es-queijo',      nome: 'Esfiha de Queijo',     descricao: 'Queijo minas frescal temperado com salsinha.',                          categoria: 'esfihas', preco: 4.5, imagem: FOTOS + '6463bc4bb413a603e69e7a1e/6463bc4bb413a61fad9e7a4fblob' },
+      { id: 'es-frango',      nome: 'Esfiha de Frango',     descricao: 'Frango desfiado temperado com tomate, cebola e creme culinário.',       categoria: 'esfihas', preco: 4,   imagem: FOTOS + '6463bc4bb413a603e69e7a1e/6463bc4bb413a6565f9e7a60blob' },
+      { id: 'es-toscana',     nome: 'Esfiha Toscana',       descricao: 'Linguiça toscana temperada com salsinha e cebola.',                     categoria: 'esfihas', preco: 4,   imagem: FOTOS + '6463bc4bb413a603e69e7a1e/6463bc4bb413a6836f9e7a71blob' },
+      { id: 'es-brigadeiro',  nome: 'Esfiha de Brigadeiro', descricao: 'Chocolate ao leite derretido com granulado.',                           categoria: 'esfihas', preco: 9,   imagem: FOTOS + '6463bc4bb413a603e69e7a1e/6463bc4bb413a655b59e7a82blob' },
+      { id: 'es-morango',     nome: 'Esfiha de Chocolate com Morango', descricao: 'Chocolate ao leite derretido com morangos frescos.',         categoria: 'esfihas', preco: 9,   imagem: FOTOS + '6463bc4bb413a603e69e7a1e/6463bc4bb413a613ba9e7a93blob' },
+
+      /* ---------- Comida chinesa ---------- */
+      { id: 'ch-yak-classico', nome: 'Yakisoba Clássico',    descricao: 'Macarrão com carne, frango, legumes (brócolis, couve-flor, cenoura, acelga) e champignon.', categoria: 'chinesa', opcoes: box(68, 51), imagem: FOTOS + '6463bc4bb413a6f7919e7a1f/6463bc4bb413a617289e7ab5blob' },
+      { id: 'ch-yak-frango',   nome: 'Yakisoba de Frango',   descricao: 'Macarrão com pedaços de frango, legumes e champignon.',                 categoria: 'chinesa', opcoes: box(48, 36), imagem: FOTOS + '-1786494984003blob', selo: 'Novo' },
+      { id: 'ch-yak-carne',    nome: 'Yakisoba de Carne',    descricao: 'Macarrão com pedaços de carne, legumes e champignon.',                  categoria: 'chinesa', opcoes: box(70, 53), imagem: FOTOS + '-1786496671466blob', selo: 'Novo' },
+      { id: 'ch-yak-veg',      nome: 'Yakisoba Vegetariano', descricao: 'Macarrão com legumes (brócolis, couve-flor, cenoura, acelga) e champignon.', categoria: 'chinesa', opcoes: box(32, 24), imagem: FOTOS + '6463bc4bb413a6f7919e7a1f/6463bc4bb413a625d79e7ac6blob' },
+      { id: 'ch-yak-especial', nome: 'Yakisoba Especial',    descricao: 'Macarrão com carne, frango, camarões selecionados, legumes e champignon.', categoria: 'chinesa', opcoes: box(76, 57), imagem: FOTOS + '6463bc4bb413a6f7919e7a1f/6463bc4bb413a615969e7ad7blob' },
+      { id: 'ch-yak-camarao',  nome: 'Yakisoba de Camarão',  descricao: 'Macarrão com camarões selecionados, legumes e champignon.',             categoria: 'chinesa', opcoes: box(85, 63), imagem: FOTOS + '6463bc4bb413a6f7919e7a1f/6463bc4bb413a654ba9e7ae8blob' },
+      { id: 'ch-frango-xadrez', nome: 'Frango Xadrez',       descricao: 'Cubos de frango, cebola, pimentão verde e vermelho e amendoim.',        categoria: 'chinesa', opcoes: boxGJ(79, 55), imagem: FOTOS + '6463bc4bb413a601679e7a2b/6463bc4db413a63ab09e7ce6blob' },
+      { id: 'ch-carne-brocolis', nome: 'Carne com Brócolis', descricao: 'Carne em tiras, brócolis, champignon, pimentão e alho ao molho de soja.', categoria: 'chinesa', opcoes: boxGJ(91, 63), imagem: FOTOS + '6463bc4bb413a6eea59e7a27/6463bc4cb413a612ff9e7c09blob' },
+      { id: 'ch-yakimeshi',    nome: 'Yakimeshi',            descricao: 'Arroz com flocos de ovos, cenoura, presunto e cebolinha picada.',       categoria: 'chinesa', opcoes: boxGJ(34, 25), imagem: FOTOS + '6463bc4bb413a6816f9e7a24/6463bc4cb413a68fea9e7b81blob' },
+      { id: 'ch-risotto',      nome: 'Risotto da China',     descricao: 'Arroz, carne em tiras, cenoura, ervilha e flocos de ovos ao molho de soja.', categoria: 'chinesa', opcoes: boxGJ(45, 31), imagem: FOTOS + '6463bc4bb413a6816f9e7a24/6463bc4cb413a68adf9e7b92blob' },
+      { id: 'ch-rolinho',      nome: 'Rolinhos Primavera',   descricao: 'Carne em tiras, repolho e cenoura envolvidos em massa fina e crocante.', categoria: 'chinesa', opcoes: [{ nome: '1 unidade', preco: 8 }, { nome: '2 unidades', preco: 11 }], imagem: FOTOS + '6463bc4bb413a63aa09e7a34/6463bc4eb413a67a319e7ed3blob' },
+
+      /* ---------- Bebidas ---------- */
+      { id: 'bb-coca-2l',     nome: 'Coca-Cola 2 L',              descricao: 'Garrafa de 2 litros.',    categoria: 'bebidas', preco: 16, imagem: FOTOS + '6463bc4bb413a64a1a9e7a3d/6463bc4fb413a683319e806bblob' },
+      { id: 'bb-coca-lata',   nome: 'Coca-Cola Lata 350 ml',      descricao: 'Lata de 350 ml.',         categoria: 'bebidas', preco: 6,  imagem: FOTOS + '6463bc4bb413a64a1a9e7a3d/6463bc4fb413a67aa19e8049blob' },
+      { id: 'bb-guarana-2l',  nome: 'Guaraná Antarctica 2 L',     descricao: 'Garrafa de 2 litros.',    categoria: 'bebidas', preco: 15, imagem: FOTOS + '6463bc4bb413a64a1a9e7a3d/6463bc50b413a6b5f69e818cblob' },
+      { id: 'bb-guarana-lata', nome: 'Guaraná Antarctica Lata 350 ml', descricao: 'Lata de 350 ml.',   categoria: 'bebidas', preco: 6,  imagem: FOTOS + '6463bc50b413a628b89e816ablob' },
+      { id: 'bb-suco-uva',    nome: 'Suco Del Valle Uva 1 L',     descricao: 'Caixa de 1 litro.',       categoria: 'bebidas', preco: 16, imagem: FOTOS + '-1717771443081blob' },
+      { id: 'bb-skol',        nome: 'Cerveja Skol Lata 269 ml',   descricao: 'Lata de 269 ml. Venda proibida para menores de 18 anos.', categoria: 'bebidas', preco: 5, imagem: FOTOS + '6463bc4bb413a64a1a9e7a3d/6463bc4fb413a657e49e8104blob' }
+    ];
+
+    /* ==========================================================
+       4. FUNÇÕES AUXILIARES
+       ========================================================== */
+    const $ = (seletor, raiz = document) => raiz.querySelector(seletor);
+    const $$ = (seletor, raiz = document) => [...raiz.querySelectorAll(seletor)];
+    const formatarPreco = valor => valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const linkWhats = mensagem => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensagem)}`;
+    const abrirWhats = mensagem => window.open(linkWhats(mensagem), '_blank', 'noopener');
+    const buscarProduto = id => PRODUTOS.find(p => p.id === id);
+    const escapar = texto => String(texto).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+    // Preço e nome do tamanho escolhido (ou do produto simples)
+    function detalhes(produto, indiceOpcao = 0) {
+      const opcao = produto.opcoes ? produto.opcoes[indiceOpcao] : null;
+      return { preco: opcao ? opcao.preco : produto.preco, opcao: opcao ? opcao.nome : '' };
+    }
+    // Nome usado nas mensagens: pizzas ganham o prefixo "Pizza"
+    function nomeCompleto(produto) {
+      return ['pizzas', 'doces'].includes(produto.categoria) ? `Pizza ${produto.nome}` : produto.nome;
+    }
+
+    /* ==========================================================
+       5. ESTADO: carrinho (salvo no localStorage) e filtros
+       ========================================================== */
+    const CHAVE_CARRINHO = 'brunelli_carrinho';
+    let carrinho = carregarCarrinho();       // [{ id, opcao, qtd }]
+    let categoriaAtual = 'todos';
+    const tamanhoEscolhido = {};             // { idProduto: índice da opção selecionada no card }
+
+    function carregarCarrinho() {
+      try {
+        const salvo = JSON.parse(localStorage.getItem(CHAVE_CARRINHO)) || [];
+        // Descarta itens que não existem mais no cardápio
+        return salvo.filter(item => {
+          const produto = buscarProduto(item.id);
+          return produto && item.qtd > 0 && (!produto.opcoes || produto.opcoes[item.opcao]);
+        });
+      } catch (erro) {
+        return [];
+      }
+    }
+    function salvarCarrinho() {
+      try { localStorage.setItem(CHAVE_CARRINHO, JSON.stringify(carrinho)); } catch (erro) { /* navegação privada: segue sem salvar */ }
+    }
+    const totalItens = () => carrinho.reduce((soma, item) => soma + item.qtd, 0);
+    const totalCarrinho = () => carrinho.reduce((soma, item) => soma + detalhes(buscarProduto(item.id), item.opcao).preco * item.qtd, 0);
+
+    /* ==========================================================
+       6. CATEGORIAS (cards que filtram a vitrine)
+       ========================================================== */
+    function desenharCategorias() {
+      const contar = id => PRODUTOS.filter(p => p.categoria === id).length;
+      const todos = `
+        <button class="categoria" type="button" data-categoria="todos" aria-pressed="${categoriaAtual === 'todos'}">
+          <span class="categoria__todos"><svg class="icone" aria-hidden="true"><use href="#i-grade"/></svg></span>
+          Todos <small>${PRODUTOS.length}</small>
+        </button>`;
+      const cards = CATEGORIAS.filter(c => contar(c.id) > 0).map(c => `
+        <button class="categoria" type="button" data-categoria="${c.id}" aria-pressed="${categoriaAtual === c.id}">
+          <img src="${c.imagem}" alt="" width="46" height="46" loading="lazy">
+          ${escapar(c.nome)} <small>${contar(c.id)}</small>
+        </button>`).join('');
+      $('#categorias').innerHTML = todos + cards;
+    }
+
+    $('#categorias').addEventListener('click', evento => {
+      const botao = evento.target.closest('[data-categoria]');
+      if (!botao) return;
+      categoriaAtual = botao.dataset.categoria;
+      $$('.categoria').forEach(b => b.setAttribute('aria-pressed', b === botao));
+      desenharProdutos();
+    });
+
+    /* ==========================================================
+       7. VITRINE DE PRODUTOS
+       ========================================================== */
+    // Em telas estreitas o CSS esconde a parte "texto-longo" para o botão caber em uma linha
+    const ROTULO_ADICIONAR = 'Adicionar<span class="texto-longo"> ao carrinho</span>';
+
+    function desenharProdutos() {
+      const lista = categoriaAtual === 'todos' ? PRODUTOS : PRODUTOS.filter(p => p.categoria === categoriaAtual);
+      const categoria = CATEGORIAS.find(c => c.id === categoriaAtual);
+      $('#titulo-vitrine').textContent = categoria ? categoria.nome : 'Todos os produtos';
+      $('#total-vitrine').textContent = `${lista.length} ${lista.length === 1 ? 'item' : 'itens'}`;
+
+      $('#produtos').innerHTML = lista.map((p, i) => {
+        const indice = tamanhoEscolhido[p.id] || 0;
+        const { preco } = detalhes(p, indice);
+        const classeSelo = p.selo === 'Promoção' ? 'selo--promocao' : p.selo === 'Novo' ? 'selo--novo' : '';
+        const opcoes = p.opcoes ? `
+          <div class="opcoes" role="group" aria-label="Tamanho de ${escapar(p.nome)}">
+            ${p.opcoes.map((o, n) => `<button class="opcao" type="button" data-acao="opcao" data-indice="${n}" aria-pressed="${n === indice}">${escapar(o.nome)}</button>`).join('')}
+          </div>` : '';
+        return `
+          <article class="produto produto--${p.categoria}" data-id="${p.id}" style="animation-delay:${Math.min(i, 8) * 40}ms">
+            <div class="produto__foto">
+              ${p.selo ? `<span class="selo ${classeSelo}">${escapar(p.selo)}</span>` : ''}
+              <img src="${p.imagem}" alt="${escapar(nomeCompleto(p))}" width="200" height="150" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="produto__corpo">
+              <h3 class="produto__nome">${escapar(p.nome)}</h3>
+              <p class="produto__descricao">${escapar(p.descricao)}</p>
+              ${opcoes}
+              <p class="produto__precos">
+                <span class="preco" data-preco>${formatarPreco(preco)}</span>
+                ${p.precoAntigo ? `<span class="preco-antigo"><span class="so-leitor">De </span>${formatarPreco(p.precoAntigo)}</span>` : ''}
+              </p>
+              <div class="produto__botoes">
+                <button class="botao botao--vinho" type="button" data-acao="adicionar" aria-label="Adicionar ${escapar(nomeCompleto(p))} ao carrinho">${ROTULO_ADICIONAR}</button>
+                <button class="botao botao-whats-produto" type="button" data-acao="whats" aria-label="Pedir ${escapar(nomeCompleto(p))} pelo WhatsApp">
+                  <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg> <span><span class="texto-longo">Pedir pelo </span>WhatsApp</span>
+                </button>
+              </div>
+            </div>
+          </article>`;
+      }).join('');
+    }
+
+    // Um único ouvinte para todos os botões dos cards
+    $('#produtos').addEventListener('click', evento => {
+      const botao = evento.target.closest('[data-acao]');
+      if (!botao) return;
+      const card = botao.closest('.produto');
+      const produto = buscarProduto(card.dataset.id);
+      const indice = tamanhoEscolhido[produto.id] || 0;
+
+      if (botao.dataset.acao === 'opcao') {
+        // Troca de tamanho: atualiza o preço do card
+        tamanhoEscolhido[produto.id] = Number(botao.dataset.indice);
+        $$('.opcao', card).forEach(o => o.setAttribute('aria-pressed', o === botao));
+        $('[data-preco]', card).textContent = formatarPreco(detalhes(produto, tamanhoEscolhido[produto.id]).preco);
+      }
+
+      if (botao.dataset.acao === 'adicionar') {
+        adicionarAoCarrinho(produto.id, indice);
+        // Feedback visual no próprio botão
+        botao.textContent = 'Adicionado ✓';
+        botao.classList.add('botao--adicionado');
+        clearTimeout(botao._tempo);
+        botao._tempo = setTimeout(() => { botao.innerHTML = ROTULO_ADICIONAR; botao.classList.remove('botao--adicionado'); }, 1400);
+      }
+
+      if (botao.dataset.acao === 'whats') {
+        const { preco, opcao } = detalhes(produto, indice);
+        abrirWhats(`Olá! Vim pelo site da ${CONFIG.nomeLoja} e gostaria de pedir:\n\n• ${nomeCompleto(produto)}${opcao ? ` (${opcao})` : ''} — ${formatarPreco(preco)}`);
+      }
+    });
+
+    /* ==========================================================
+       8. CARRINHO
+       ========================================================== */
+    function adicionarAoCarrinho(id, opcao = 0) {
+      const existente = carrinho.find(item => item.id === id && item.opcao === opcao);
+      if (existente) existente.qtd++;
+      else carrinho.push({ id, opcao, qtd: 1 });
+      atualizarCarrinho();
+      mostrarAviso(`${nomeCompleto(buscarProduto(id))} adicionado!`);
+      const contador = $('#contador');
+      contador.classList.remove('pulo');
+      void contador.offsetWidth;            // reinicia a animação
+      contador.classList.add('pulo');
+    }
+
+    function alterarQuantidade(indice, variacao) {
+      const item = carrinho[indice];
+      if (!item) return;
+      item.qtd += variacao;
+      if (item.qtd <= 0) carrinho.splice(indice, 1);
+      atualizarCarrinho();
+    }
+
+    function atualizarCarrinho() {
+      salvarCarrinho();
+      const quantidade = totalItens();
+      const contador = $('#contador');
+      contador.textContent = quantidade;
+      contador.hidden = quantidade === 0;
+      $('#abrir-carrinho').setAttribute('aria-label', `Abrir carrinho (${quantidade} ${quantidade === 1 ? 'item' : 'itens'})`);
+      $('#rodape-carrinho').hidden = quantidade === 0;
+      $('#total-carrinho').textContent = formatarPreco(totalCarrinho());
+
+      const area = $('#itens-carrinho');
+      if (quantidade === 0) {
+        area.innerHTML = `
+          <div class="carrinho__vazio">
+            <span aria-hidden="true">🍕</span>
+            <p><strong>Seu carrinho está vazio</strong></p>
+            <p>Que tal escolher uma pizza?</p>
+            <button class="botao botao--vinho" type="button" data-acao="fechar">Ver cardápio</button>
+          </div>`;
+        return;
+      }
+      area.innerHTML = carrinho.map((item, indice) => {
+        const produto = buscarProduto(item.id);
+        const { preco, opcao } = detalhes(produto, item.opcao);
+        const nome = escapar(nomeCompleto(produto));
+        return `
+          <div class="item">
+            <img class="item__foto" src="${produto.imagem}" alt="" width="64" height="64" loading="lazy" onerror="this.style.visibility='hidden'">
+            <div>
+              <p class="item__nome">${nome}</p>
+              ${opcao ? `<p class="item__opcao">${escapar(opcao)}</p>` : ''}
+              <p class="item__unitario">${formatarPreco(preco)} cada</p>
+              <div class="quantidade">
+                <button type="button" data-acao="menos" data-indice="${indice}" aria-label="Diminuir quantidade de ${nome}">−</button>
+                <output aria-label="Quantidade">${item.qtd}</output>
+                <button type="button" data-acao="mais" data-indice="${indice}" aria-label="Aumentar quantidade de ${nome}">+</button>
+              </div>
+            </div>
+            <div class="item__direita">
+              <button class="item__remover" type="button" data-acao="remover" data-indice="${indice}" aria-label="Remover ${nome} do carrinho">
+                <svg class="icone" aria-hidden="true"><use href="#i-lixeira"/></svg>
+              </button>
+              <span class="item__subtotal">${formatarPreco(preco * item.qtd)}</span>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    $('#itens-carrinho').addEventListener('click', evento => {
+      const botao = evento.target.closest('[data-acao]');
+      if (!botao) return;
+      const indice = Number(botao.dataset.indice);
+      const acao = botao.dataset.acao;
+      if (acao === 'mais') alterarQuantidade(indice, 1);
+      if (acao === 'menos') alterarQuantidade(indice, -1);
+      if (acao === 'remover') alterarQuantidade(indice, -carrinho[indice].qtd);
+      if (acao === 'fechar') { fecharCarrinho(); $('#cardapio').scrollIntoView(); return; }
+      // Mantém o foco dentro da gaveta depois de redesenhar a lista
+      const alvo = $(`[data-acao="${acao}"][data-indice="${indice}"]`, $('#itens-carrinho'));
+      (alvo || $('#carrinho')).focus();
+    });
+
+    $('#limpar-carrinho').addEventListener('click', () => {
+      if (confirm('Deseja remover todos os itens do carrinho?')) { carrinho = []; atualizarCarrinho(); $('#carrinho').focus(); }
+    });
+
+    // Monta a mensagem do pedido e abre o WhatsApp
+    $('#finalizar').addEventListener('click', () => {
+      if (!carrinho.length) return;
+      const linhas = carrinho.map(item => {
+        const produto = buscarProduto(item.id);
+        const { preco, opcao } = detalhes(produto, item.opcao);
+        return `• ${item.qtd}x ${nomeCompleto(produto)}${opcao ? ` (${opcao})` : ''}\n   ${formatarPreco(preco)} cada = ${formatarPreco(preco * item.qtd)}`;
+      });
+      const entrega = $('input[name="entrega"]:checked').value;
+      const observacoes = $('#observacoes').value.trim();
+      const mensagem = [
+        `Olá! Gostaria de fazer um pedido pelo site da ${CONFIG.nomeLoja}:`,
+        '',
+        ...linhas,
+        '',
+        `*Total dos itens: ${formatarPreco(totalCarrinho())}*`,
+        `Recebimento: ${entrega}`,
+        observacoes ? `Observações: ${observacoes}` : null
+      ].filter(linha => linha !== null).join('\n');
+      abrirWhats(mensagem);
+    });
+
+    /* ---------- Abrir / fechar a gaveta ---------- */
+    let focoAnterior = null;
+    function abrirCarrinho() {
+      focoAnterior = document.activeElement;
+      fecharMenu();
+      $('#carrinho').classList.add('aberto');
+      $('#fundo-escuro').classList.add('visivel');
+      document.body.classList.add('sem-rolagem', 'carrinho-aberto');
+      esconderAviso();
+      $('#fechar-carrinho').focus();
+    }
+    function fecharCarrinho() {
+      $('#carrinho').classList.remove('aberto');
+      $('#fundo-escuro').classList.remove('visivel');
+      document.body.classList.remove('sem-rolagem', 'carrinho-aberto');
+      if (focoAnterior && document.contains(focoAnterior)) focoAnterior.focus();
+    }
+    $('#abrir-carrinho').addEventListener('click', abrirCarrinho);
+    $('#fechar-carrinho').addEventListener('click', fecharCarrinho);
+    $('#fundo-escuro').addEventListener('click', fecharCarrinho);
+
+    // Teclado: Esc fecha; Tab fica preso dentro da gaveta enquanto ela estiver aberta
+    document.addEventListener('keydown', evento => {
+      const gaveta = $('#carrinho');
+      if (evento.key === 'Escape') {
+        if (gaveta.classList.contains('aberto')) fecharCarrinho();
+        else fecharMenu();
+      }
+      if (evento.key === 'Tab' && gaveta.classList.contains('aberto')) {
+        const focaveis = $$('button, input, textarea, a[href]', gaveta).filter(el => el.offsetParent !== null);
+        const primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
+        if (evento.shiftKey && document.activeElement === primeiro) { evento.preventDefault(); ultimo.focus(); }
+        else if (!evento.shiftKey && document.activeElement === ultimo) { evento.preventDefault(); primeiro.focus(); }
+      }
+    });
+
+    /* ---------- Aviso (toast) ---------- */
+    let tempoAviso;
+    function mostrarAviso(texto) {
+      $('#aviso-texto').textContent = texto;
+      $('#aviso').classList.add('visivel');
+      clearTimeout(tempoAviso);
+      tempoAviso = setTimeout(esconderAviso, 2800);
+    }
+    function esconderAviso() { $('#aviso').classList.remove('visivel'); }
+    $('#aviso-ver').addEventListener('click', abrirCarrinho);
+
+    /* ==========================================================
+       9. MENU, CABEÇALHO E LINKS DO WHATSAPP
+       ========================================================== */
+    const hamburguer = $('#hamburguer');
+    function fecharMenu() {
+      $('#menu').classList.remove('aberto');
+      hamburguer.setAttribute('aria-expanded', 'false');
+      hamburguer.setAttribute('aria-label', 'Abrir menu');
+    }
+    hamburguer.addEventListener('click', () => {
+      const aberto = $('#menu').classList.toggle('aberto');
+      hamburguer.setAttribute('aria-expanded', aberto);
+      hamburguer.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    });
+    $$('.menu__lista a').forEach(link => link.addEventListener('click', fecharMenu));
+
+    // Sombra no cabeçalho depois de rolar
+    const aoRolar = () => $('#cabecalho').classList.toggle('rolou', window.scrollY > 10);
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    aoRolar();
+
+    // Todos os links com data-whats recebem o número e a mensagem definidos em CONFIG
+    const MENSAGENS = {
+      padrao: CONFIG.mensagemPadrao,
+      cardapio: `Olá! Vim pelo site da ${CONFIG.nomeLoja} e gostaria de receber o cardápio completo.`
+    };
+    $$('[data-whats]').forEach(link => { link.href = linkWhats(MENSAGENS[link.dataset.whats] || CONFIG.mensagemPadrao); });
+
+    /* ==========================================================
+       10. FAQ (sanfona): abre um item e fecha os demais
+       ========================================================== */
+    $('#faq').addEventListener('click', evento => {
+      const pergunta = evento.target.closest('.faq__pergunta');
+      if (!pergunta) return;
+      const item = pergunta.closest('.faq__item');
+      const abrir = !item.classList.contains('aberto');
+      $$('.faq__item', $('#faq')).forEach(outro => {
+        outro.classList.remove('aberto');
+        $('.faq__pergunta', outro).setAttribute('aria-expanded', 'false');
+      });
+      if (abrir) { item.classList.add('aberto'); pergunta.setAttribute('aria-expanded', 'true'); }
+    });
+
+    /* ==========================================================
+       11. ANIMAÇÕES AO ROLAR E MENU ATIVO
+       ========================================================== */
+    document.documentElement.classList.add('js');
+    if ('IntersectionObserver' in window) {
+      const revelar = new IntersectionObserver((entradas, observador) => {
+        entradas.forEach(entrada => {
+          if (entrada.isIntersecting) { entrada.target.classList.add('visivel'); observador.unobserve(entrada.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      $$('.revelar').forEach(el => revelar.observe(el));
+
+      // Destaca no menu a seção que está na tela
+      const links = $$('.menu__lista a');
+      const secoes = new IntersectionObserver(entradas => {
+        entradas.forEach(entrada => {
+          if (entrada.isIntersecting) links.forEach(l => l.classList.toggle('ativo', l.getAttribute('href') === `#${entrada.target.id}`));
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      links.forEach(l => { const secao = $(l.getAttribute('href')); if (secao) secoes.observe(secao); });
+    } else {
+      $$('.revelar').forEach(el => el.classList.add('visivel'));
+    }
+
+    /* ==========================================================
+       12. ABERTO / FECHADO AGORA (horário de São Paulo)
+       ========================================================== */
+    function atualizarStatus() {
+      try {
+        const partes = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+        const valor = tipo => partes.find(p => p.type === tipo).value;
+        const dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(valor('weekday'));
+        const hora = Number(valor('hour')) + Number(valor('minute')) / 60;
+        const horario = CONFIG.horarios[dia];
+        const status = $('#status');
+        if (horario && hora >= horario[0] && hora < horario[1]) {
+          status.textContent = `Aberto agora · até ${horario[1] === 24 ? '00h' : horario[1] + 'h'}`;
+          status.className = 'status aberto';
+        } else {
+          // Procura a próxima abertura (hoje mais tarde ou nos próximos dias)
+          const nomes = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+          let texto = 'Fechado no momento';
+          for (let i = 0; i < 7; i++) {
+            const d = (dia + i) % 7, h = CONFIG.horarios[d];
+            if (h && (i > 0 || hora < h[0])) { texto = `Fechado · abre ${i === 0 ? 'hoje' : i === 1 ? 'amanhã' : nomes[d]} às ${h[0]}h`; break; }
+          }
+          status.textContent = texto;
+          status.className = 'status fechado';
+        }
+      } catch (erro) { /* mantém o texto padrão */ }
+    }
+
+    /* ==========================================================
+       13. INICIALIZAÇÃO
+       ========================================================== */
+    const anoAtual = new Date().getFullYear();
+    $('#ano').textContent = anoAtual;
+    $('#anos-casa').textContent = `${anoAtual - CONFIG.anoFundacao} anos`;
+    desenharCategorias();
+    desenharProdutos();
+    atualizarCarrinho();
+    atualizarStatus();
+    setInterval(atualizarStatus, 60000);
+  </script>
+</body>
+</html>
